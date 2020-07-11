@@ -69,6 +69,8 @@ GL/glu.h
 C:/Users/Gogo/CLionProjects/OpenGLCourse/main.cpp
 stdio.h
 -
+string.h
+-
 GL/glew.h
 -
 GLFW/glfw3.h
