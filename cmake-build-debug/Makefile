@@ -124,32 +124,59 @@ OpenGLCourse\fast:
 	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\build
 .PHONY : OpenGLCourse\fast
 
-main.obj: main.cpp.obj
+src\Mesh.obj: src\Mesh.cpp.obj
 
-.PHONY : main.obj
+.PHONY : src\Mesh.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\main.cpp.obj
-.PHONY : main.cpp.obj
+src\Mesh.cpp.obj:
+	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.obj
+.PHONY : src\Mesh.cpp.obj
 
-main.i: main.cpp.i
+src\Mesh.i: src\Mesh.cpp.i
 
-.PHONY : main.i
+.PHONY : src\Mesh.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\main.cpp.i
-.PHONY : main.cpp.i
+src\Mesh.cpp.i:
+	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.i
+.PHONY : src\Mesh.cpp.i
 
-main.s: main.cpp.s
+src\Mesh.s: src\Mesh.cpp.s
 
-.PHONY : main.s
+.PHONY : src\Mesh.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\main.cpp.s
-.PHONY : main.cpp.s
+src\Mesh.cpp.s:
+	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.s
+.PHONY : src\Mesh.cpp.s
+
+src\main.obj: src\main.cpp.obj
+
+.PHONY : src\main.obj
+
+# target to build an object file
+src\main.cpp.obj:
+	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\src\main.cpp.obj
+.PHONY : src\main.cpp.obj
+
+src\main.i: src\main.cpp.i
+
+.PHONY : src\main.i
+
+# target to preprocess a source file
+src\main.cpp.i:
+	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\src\main.cpp.i
+.PHONY : src\main.cpp.i
+
+src\main.s: src\main.cpp.s
+
+.PHONY : src\main.s
+
+# target to generate assembly for a file
+src\main.cpp.s:
+	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\src\main.cpp.s
+.PHONY : src\main.cpp.s
 
 # Help Target
 help:
@@ -160,9 +187,12 @@ help:
 	@echo ... OpenGLCourse
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... src/Mesh.obj
+	@echo ... src/Mesh.i
+	@echo ... src/Mesh.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

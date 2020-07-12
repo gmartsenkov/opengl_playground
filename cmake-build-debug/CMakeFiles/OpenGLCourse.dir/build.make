@@ -58,36 +58,57 @@ include CMakeFiles\OpenGLCourse.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\OpenGLCourse.dir\flags.make
 
-CMakeFiles\OpenGLCourse.dir\main.cpp.obj: CMakeFiles\OpenGLCourse.dir\flags.make
-CMakeFiles\OpenGLCourse.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGLCourse.dir/main.cpp.obj"
+CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.obj: CMakeFiles\OpenGLCourse.dir\flags.make
+CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.obj: ..\src\Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OpenGLCourse.dir/src/Mesh.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\OpenGLCourse.dir\main.cpp.obj /FdCMakeFiles\OpenGLCourse.dir\ /FS -c C:\Users\Gogo\CLionProjects\OpenGLCourse\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.obj /FdCMakeFiles\OpenGLCourse.dir\ /FS -c C:\Users\Gogo\CLionProjects\OpenGLCourse\src\Mesh.cpp
 <<
 
-CMakeFiles\OpenGLCourse.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLCourse.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\OpenGLCourse.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Gogo\CLionProjects\OpenGLCourse\main.cpp
+CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLCourse.dir/src/Mesh.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Gogo\CLionProjects\OpenGLCourse\src\Mesh.cpp
 <<
 
-CMakeFiles\OpenGLCourse.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLCourse.dir/main.cpp.s"
+CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLCourse.dir/src/Mesh.cpp.s"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\OpenGLCourse.dir\main.cpp.s /c C:\Users\Gogo\CLionProjects\OpenGLCourse\main.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.s /c C:\Users\Gogo\CLionProjects\OpenGLCourse\src\Mesh.cpp
+<<
+
+CMakeFiles\OpenGLCourse.dir\src\main.cpp.obj: CMakeFiles\OpenGLCourse.dir\flags.make
+CMakeFiles\OpenGLCourse.dir\src\main.cpp.obj: ..\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGLCourse.dir/src/main.cpp.obj"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\OpenGLCourse.dir\src\main.cpp.obj /FdCMakeFiles\OpenGLCourse.dir\ /FS -c C:\Users\Gogo\CLionProjects\OpenGLCourse\src\main.cpp
+<<
+
+CMakeFiles\OpenGLCourse.dir\src\main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLCourse.dir/src/main.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\OpenGLCourse.dir\src\main.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Gogo\CLionProjects\OpenGLCourse\src\main.cpp
+<<
+
+CMakeFiles\OpenGLCourse.dir\src\main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLCourse.dir/src/main.cpp.s"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\OpenGLCourse.dir\src\main.cpp.s /c C:\Users\Gogo\CLionProjects\OpenGLCourse\src\main.cpp
 <<
 
 # Object files for target OpenGLCourse
 OpenGLCourse_OBJECTS = \
-"CMakeFiles\OpenGLCourse.dir\main.cpp.obj"
+"CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.obj" \
+"CMakeFiles\OpenGLCourse.dir\src\main.cpp.obj"
 
 # External object files for target OpenGLCourse
 OpenGLCourse_EXTERNAL_OBJECTS =
 
-OpenGLCourse.exe: CMakeFiles\OpenGLCourse.dir\main.cpp.obj
+OpenGLCourse.exe: CMakeFiles\OpenGLCourse.dir\src\Mesh.cpp.obj
+OpenGLCourse.exe: CMakeFiles\OpenGLCourse.dir\src\main.cpp.obj
 OpenGLCourse.exe: CMakeFiles\OpenGLCourse.dir\build.make
 OpenGLCourse.exe: CMakeFiles\OpenGLCourse.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable OpenGLCourse.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable OpenGLCourse.exe"
 	"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\OpenGLCourse.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\OpenGLCourse.dir\objects1.rsp @<<
  /out:OpenGLCourse.exe /implib:OpenGLCourse.lib /pdb:C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\OpenGLCourse.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console   -LIBPATH:C:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glew-2.1.0\lib\Release\Win32  -LIBPATH:C:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glfw-3.3.2.bin.WIN32\lib-vc2019  opengl32.lib glew32.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

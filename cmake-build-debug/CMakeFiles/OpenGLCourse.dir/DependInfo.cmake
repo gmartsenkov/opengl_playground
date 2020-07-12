@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Gogo/CLionProjects/OpenGLCourse/main.cpp" "C:/Users/Gogo/CLionProjects/OpenGLCourse/cmake-build-debug/CMakeFiles/OpenGLCourse.dir/main.cpp.obj"
+  "C:/Users/Gogo/CLionProjects/OpenGLCourse/src/Mesh.cpp" "C:/Users/Gogo/CLionProjects/OpenGLCourse/cmake-build-debug/CMakeFiles/OpenGLCourse.dir/src/Mesh.cpp.obj"
+  "C:/Users/Gogo/CLionProjects/OpenGLCourse/src/main.cpp" "C:/Users/Gogo/CLionProjects/OpenGLCourse/cmake-build-debug/CMakeFiles/OpenGLCourse.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

@@ -1352,12 +1352,18 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 ../dependencies/glm/glm/detail/func_vector_relational.inl
 
-C:/Users/Gogo/CLionProjects/OpenGLCourse/main.cpp
+C:/Users/Gogo/CLionProjects/OpenGLCourse/src/Mesh.h
+GL/glew.h
+C:/Users/Gogo/CLionProjects/OpenGLCourse/src/GL/glew.h
+
+C:/Users/Gogo/CLionProjects/OpenGLCourse/src/main.cpp
 stdio.h
 -
 string.h
 -
 cmath
+-
+vector
 -
 GL/glew.h
 -
@@ -1369,4 +1375,6 @@ glm/gtc/matrix_transform.hpp
 -
 glm/gtc/type_ptr.hpp
 -
+Mesh.h
+C:/Users/Gogo/CLionProjects/OpenGLCourse/src/Mesh.h
 

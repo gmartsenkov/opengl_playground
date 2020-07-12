@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <cmath>
+#include <vector>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -8,9 +9,13 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "Mesh.h"
+
 // Window dimensions
 const GLint WIDTH = 800, HEIGHT = 600;
 const float toRadiant = 3.14159265359 / 180.0f;
+
+std::vector<Mesh*> meshList;
 
 GLuint VAO, VBO, IBO, shader, modelUniform, projectionUniform;
 bool direction = true;
@@ -50,30 +55,20 @@ void CreateTriangle()
             0,1,2
     };
 
-    const GLfloat vertices[] = {
+    GLfloat vertices[] = {
             -1.0f, -1.0f, 0.0f,
             0.0f, -1.0f, 1.0f,
             1.0f, -1.0f, 0.0f,
             0.0f, 1.0f, 0.0f
     };
 
-    glGenVertexArrays(1, &VAO);
-    glBindVertexArray(VAO);
+    Mesh *obj1 = new Mesh();
+    obj1->Create(vertices, indices, 12, 12);
+    meshList.push_back(obj1);
 
-    glGenBuffers(1, &IBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-
-    glEnableVertexAttribArray(0);
-    glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
+    Mesh *obj2 = new Mesh();
+    obj2->Create(vertices, indices, 12, 12);
+    meshList.push_back(obj2);
 }
 
 void AddShader(GLuint theProgram, const char* shaderCode, GLenum shaderType)
@@ -232,13 +227,15 @@ int main() {
         glUniformMatrix4fv(modelUniform, 1, GL_FALSE, glm::value_ptr(model));
         glUniformMatrix4fv(projectionUniform, 1, GL_FALSE, glm::value_ptr(projection));
 
-        glBindVertexArray(VAO);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+        meshList[0]->Render();
 
-        glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-xMoveOffset, 1.0f, -2.5f));
+        model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-        glBindVertexArray(0);
+        glUniformMatrix4fv(modelUniform, 1, GL_FALSE, glm::value_ptr(model));
+
+        meshList[1]->Render();
 
         glUseProgram(0);
 

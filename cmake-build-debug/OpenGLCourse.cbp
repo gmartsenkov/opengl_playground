@@ -90,7 +90,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Gogo/CLionProjects/OpenGLCourse/main.cpp">
+		<Unit filename="C:/Users/Gogo/CLionProjects/OpenGLCourse/src/Mesh.cpp">
+			<Option target="OpenGLCourse"/>
+		</Unit>
+		<Unit filename="C:/Users/Gogo/CLionProjects/OpenGLCourse/src/Mesh.h">
+			<Option target="OpenGLCourse"/>
+		</Unit>
+		<Unit filename="C:/Users/Gogo/CLionProjects/OpenGLCourse/src/main.cpp">
 			<Option target="OpenGLCourse"/>
 		</Unit>
 		<Unit filename="C:/Users/Gogo/CLionProjects/OpenGLCourse/CMakeLists.txt">

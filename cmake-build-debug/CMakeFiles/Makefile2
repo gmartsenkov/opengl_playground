@@ -75,12 +75,12 @@ clean: CMakeFiles\OpenGLCourse.dir\clean
 CMakeFiles\OpenGLCourse.dir\all:
 	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\depend
 	$(MAKE) -f CMakeFiles\OpenGLCourse.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target OpenGLCourse"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target OpenGLCourse"
 .PHONY : CMakeFiles\OpenGLCourse.dir\all
 
 # Build rule for subdir invocation for target.
 CMakeFiles\OpenGLCourse.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles 3
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) CMakeFiles\OpenGLCourse.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Gogo\CLionProjects\OpenGLCourse\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles\OpenGLCourse.dir\rule

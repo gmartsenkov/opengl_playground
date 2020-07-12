@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/OpenGLCourse.dir/main.cpp.obj"
+  "CMakeFiles/OpenGLCourse.dir/src/Mesh.cpp.obj"
+  "CMakeFiles/OpenGLCourse.dir/src/main.cpp.obj"
   "OpenGLCourse.exe"
   "OpenGLCourse.exe.manifest"
   "OpenGLCourse.lib"
