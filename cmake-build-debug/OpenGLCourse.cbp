@@ -26,6 +26,7 @@
 				<Compiler>
 					<Add directory="C:/Users/Gogo/CLionProjects/OpenGLCourse/dependencies/glew-2.1.0/include"/>
 					<Add directory="C:/Users/Gogo/CLionProjects/OpenGLCourse/dependencies/glfw-3.3.2.bin.WIN32/include"/>
+					<Add directory="C:/Users/Gogo/CLionProjects/OpenGLCourse/dependencies/glm"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.7.2\include\um"/>
@@ -51,6 +52,7 @@
 				<Compiler>
 					<Add directory="C:/Users/Gogo/CLionProjects/OpenGLCourse/dependencies/glew-2.1.0/include"/>
 					<Add directory="C:/Users/Gogo/CLionProjects/OpenGLCourse/dependencies/glfw-3.3.2.bin.WIN32/include"/>
+					<Add directory="C:/Users/Gogo/CLionProjects/OpenGLCourse/dependencies/glm"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
 					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.7.2\include\um"/>

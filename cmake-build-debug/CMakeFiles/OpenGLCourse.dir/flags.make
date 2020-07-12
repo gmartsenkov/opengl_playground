@@ -6,5 +6,5 @@ CXX_FLAGS = /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd   -std:c++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -IC:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glew-2.1.0\include -IC:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glfw-3.3.2.bin.WIN32\include 
+CXX_INCLUDES = -IC:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glew-2.1.0\include -IC:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glfw-3.3.2.bin.WIN32\include -IC:\Users\Gogo\CLionProjects\OpenGLCourse\dependencies\glm 
 

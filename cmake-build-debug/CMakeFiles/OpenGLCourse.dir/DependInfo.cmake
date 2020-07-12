@@ -12,6 +12,7 @@ set(CMAKE_CXX_COMPILER_ID "MSVC")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../dependencies/glew-2.1.0/include"
   "../dependencies/glfw-3.3.2.bin.WIN32/include"
+  "../dependencies/glm"
   )
 
 # Targets to which this target links.
