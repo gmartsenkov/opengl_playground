@@ -12,7 +12,7 @@
 const GLint WIDTH = 800, HEIGHT = 600;
 const float toRadiant = 3.14159265359 / 180.0f;
 
-GLuint VAO, VBO, IBO, shader, modelUniform;
+GLuint VAO, VBO, IBO, shader, modelUniform, projectionUniform;
 bool direction = true;
 float xMoveOffset = 0.0f;
 float xMoveStep = 0.007f;
@@ -25,9 +25,10 @@ static const char* vShader = "\n"
                              "layout (location = 0) in vec3 pos;\n"
                              "out vec4 vCol;\n"
                              "uniform mat4 model;\n"
+                             "uniform mat4 projection;\n"
                              "void main()\n"
                              "{\n"
-                             "gl_Position = model * vec4(pos.x, pos.y, pos.z, 1.0);\n"
+                             "gl_Position = projection * model * vec4(pos.x, pos.y, pos.z, 1.0);\n"
                              "vCol = vec4(clamp(pos, 0.0f, 1.0f), 1.0f);\n"
                              "}";
 static const char* fShader = "\n"
@@ -133,6 +134,7 @@ void CompileShaders()
     }
 
     modelUniform = glGetUniformLocation(shader, "model");
+    projectionUniform = glGetUniformLocation(shader, "projection");
 }
 
 int main() {
@@ -182,6 +184,8 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
 
+    glm::mat4 projection = glm::perspective(45.0f, GLfloat(bufferWidth/bufferHeight), 0.1f, 100.0f);
+
     // Setup viewport size
     glViewport(0, 0, bufferWidth, bufferHeight);
 
@@ -221,11 +225,12 @@ int main() {
 
 
         glm::mat4 model(1.0f);
-        // model = glm::translate(model, glm::vec3(xMoveOffset, 0.0f, 0.0f));
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, -2.5f));
         model = glm::rotate(model, xRotateAngle * toRadiant, glm::vec3(0.0f, 1.0f, 0.0f));
         model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 
         glUniformMatrix4fv(modelUniform, 1, GL_FALSE, glm::value_ptr(model));
+        glUniformMatrix4fv(projectionUniform, 1, GL_FALSE, glm::value_ptr(projection));
 
         glBindVertexArray(VAO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
