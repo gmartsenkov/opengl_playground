@@ -1,3 +1,0 @@
-C:/Users/Gogo/CLionProjects/OpenGLCourse/cmake-build-debug/CMakeFiles/OpenGLCourse.dir
-C:/Users/Gogo/CLionProjects/OpenGLCourse/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Gogo/CLionProjects/OpenGLCourse/cmake-build-debug/CMakeFiles/rebuild_cache.dir
