@@ -12,10 +12,12 @@
 const GLint WIDTH = 800, HEIGHT = 600;
 const float toRadiant = 3.14159265359 / 180.0f;
 
-GLuint VAO, VBO, shader, modelUniform;
+GLuint VAO, VBO, IBO, shader, modelUniform;
 bool direction = true;
 float xMoveOffset = 0.0f;
 float xMoveStep = 0.007f;
+float xRotateAngle = 0.0f;
+float xRotateStep = 0.3f;
 
 // Vertex shader
 static const char* vShader = "\n"
@@ -39,8 +41,17 @@ static const char* fShader = "\n"
 
 void CreateTriangle()
 {
+
+    unsigned int indices[] = {
+            0,3,1,
+            1,3,2,
+            2,3,0,
+            0,1,2
+    };
+
     const GLfloat vertices[] = {
             -1.0f, -1.0f, 0.0f,
+            0.0f, -1.0f, 1.0f,
             1.0f, -1.0f, 0.0f,
             0.0f, 1.0f, 0.0f
     };
@@ -48,14 +59,19 @@ void CreateTriangle()
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
+    glGenBuffers(1, &IBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    glEnableVertexAttribArray(0);
 
+    glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 }
 
@@ -164,6 +180,8 @@ int main() {
         return 1;
     }
 
+    glEnable(GL_DEPTH_TEST);
+
     // Setup viewport size
     glViewport(0, 0, bufferWidth, bufferHeight);
 
@@ -189,24 +207,32 @@ int main() {
             direction = !direction;
         }
 
+        if (xRotateAngle > 360.0f) {
+            xRotateAngle = 0;
+        } else {
+            xRotateAngle += xRotateStep;
+        }
+
         // Clear window
         glClearColor(0.0f,0.0f,0.0f,1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         glUseProgram(shader);
 
 
         glm::mat4 model(1.0f);
         // model = glm::translate(model, glm::vec3(xMoveOffset, 0.0f, 0.0f));
+        model = glm::rotate(model, xRotateAngle * toRadiant, glm::vec3(0.0f, 1.0f, 0.0f));
         model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
-        // model = glm::rotate(model, 45 * toRadiant, glm::vec3(0.0f, 0.0f, 1.0f));
 
         glUniformMatrix4fv(modelUniform, 1, GL_FALSE, glm::value_ptr(model));
 
         glBindVertexArray(VAO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
 
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
         glBindVertexArray(0);
 
         glUseProgram(0);
