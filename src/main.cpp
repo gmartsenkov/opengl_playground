@@ -11,6 +11,7 @@
 
 #include "Mesh.h"
 #include "Shader.h"
+#include "Window.h"
 
 // Window dimensions
 const GLint WIDTH = 800, HEIGHT = 600;
@@ -78,20 +79,13 @@ int main() {
     // Allow forward compatibility
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-    GLFWwindow *mainWindow = glfwCreateWindow(WIDTH, HEIGHT, "Test Window", NULL, NULL);
-    if(!mainWindow)
+    Window *mainWindow = new Window(HEIGHT, WIDTH, "Test Window");
+
+    if (!mainWindow->Initialise())
     {
-        printf("GLFW window creation failed");
-        glfwTerminate();
+        delete mainWindow;
         return 1;
     }
-
-    // Get buffer size information
-    int bufferWidth, bufferHeight;
-    glfwGetFramebufferSize(mainWindow, &bufferWidth, &bufferHeight);
-
-    // Set context for GLEW to use
-    glfwMakeContextCurrent(mainWindow);
 
     // Allow modern extension features
     glewExperimental = GL_TRUE;
@@ -99,24 +93,23 @@ int main() {
     if (glewInit() != GLEW_OK)
     {
         printf("GLEW initialisation failed");
-        glfwDestroyWindow(mainWindow);
-        glfwTerminate();
+        delete mainWindow;
         return 1;
     }
 
     glEnable(GL_DEPTH_TEST);
 
-    glm::mat4 projection = glm::perspective(45.0f, GLfloat(bufferWidth/bufferHeight), 0.1f, 100.0f);
-
     // Setup viewport size
-    glViewport(0, 0, bufferWidth, bufferHeight);
+    glViewport(0, 0, mainWindow->GetBufferWidth(), mainWindow->GetBufferHeight());
 
     CreateTriangle();
     CreateShaders();
 
     // Loop until window closed
 
-    while(!glfwWindowShouldClose(mainWindow))
+    glm::mat4 projection = glm::perspective(45.0f, GLfloat(mainWindow->GetBufferWidth()/mainWindow->GetBufferHeight()), 0.1f, 100.0f);
+
+    while(!mainWindow->GetShouldClose())
     {
         // Get + handle user input events
         glfwPollEvents();
@@ -165,8 +158,12 @@ int main() {
 
         glUseProgram(0);
 
-        glfwSwapBuffers(mainWindow);
+        mainWindow->SwapBuffers();
     }
+
+    for(auto shader : shaderList) { delete shader; }
+    for(auto mesh : meshList) { delete mesh; }
+    delete mainWindow;
 
     return 0;
 }
