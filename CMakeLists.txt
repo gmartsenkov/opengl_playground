@@ -14,6 +14,7 @@ file(GLOB OpenGLCourseSrc "src/*")
 
 file(COPY dependencies/glew-2.1.0/bin/Release/Win32/glew32.dll
         DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+file(COPY shaders DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(OpenGLCourse ${OpenGLCourseSrc})
 target_link_libraries(OpenGLCourse opengl32.lib glew32.lib glfw3.lib)
