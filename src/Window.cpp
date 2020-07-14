@@ -4,6 +4,10 @@
 
 Window::Window(GLint windowHeight, GLint windowWidth, const char* windowTitle)
     : m_WindowHeight(windowHeight), m_WindowWidth(windowWidth), m_WindowTitle(windowTitle) {
+
+    m_Mouse_X_Change = 0.0f;
+    m_Mouse_Y_Change = 0.0f;
+
     for(int i = 0; i < 1024; i++)
     {
         keys[i] = false;
@@ -99,7 +103,7 @@ GLfloat Window::GetMouse_X_Change() {
     return theChange;
 }
 
-GLfloat Window::GetMouse_Y_Change() {
+GLfloat Window::GetMouse_Y_Change() {7
     GLfloat theChange = m_Mouse_Y_Change;
     m_Mouse_Y_Change = 0;
     return theChange;
